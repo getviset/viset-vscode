@@ -19,8 +19,10 @@ claim for adversarial differently levelled delimiter-like content.
 
 ## Install
 
-Install `getviset.viset` from the Visual Studio Marketplace, or install the release VSIX with
-**Extensions: Install from VSIX...**.
+Install the
+[`getviset.viset` v0.1.0 VSIX](https://github.com/getviset/viset-vscode/releases/download/v0.1.0/getviset.viset-0.1.0.vsix)
+from its [GitHub release](https://github.com/getviset/viset-vscode/releases/tag/v0.1.0).
+`getviset.viset` is not currently listed on the Marketplace.
 
 ## Development
 
