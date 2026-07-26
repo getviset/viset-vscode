@@ -1,0 +1,12 @@
+.github/**
+.agent-workspace/**
+dist/**
+node_modules/**
+test/**
+.env
+.env.*
+.gitignore
+.vscodeignore
+flake.lock
+flake.nix
+package-lock.json

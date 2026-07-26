@@ -1,0 +1,6 @@
+.agent-workspace/
+dist/
+node_modules/
+*.vsix
+.env
+.env.*

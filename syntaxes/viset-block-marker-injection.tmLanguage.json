@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Viset later-line block marker injection",
+  "scopeName": "viset.injection.lua.block-marker",
+  "injectionSelector": "L:comment.block.lua -meta.embedded.block.toml.viset",
+  "patterns": [
+    {
+      "name": "meta.viset.comment.block.marker-forward.lua",
+      "begin": "^(?=[^\\r\\n]*#\\s*viset(?:\\b|$))",
+      "end": "(?=\\]=*\\])",
+      "contentName": "meta.embedded.block.toml.viset",
+      "patterns": [
+        {
+          "include": "source.toml.viset"
+        }
+      ]
+    }
+  ]
+}

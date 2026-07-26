@@ -1,0 +1,76 @@
+{
+  "name": "viset",
+  "displayName": "Viset",
+  "description": "Embedded TOML and JavaScript syntax highlighting for Viset Lua captures.",
+  "version": "0.1.0",
+  "publisher": "getviset",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getviset/viset-vscode.git"
+  },
+  "homepage": "https://github.com/getviset/viset-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/getviset/viset-vscode/issues"
+  },
+  "engines": {
+    "vscode": "^1.130.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "viset",
+    "lua",
+    "toml",
+    "javascript"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "viset.injection.lua",
+        "path": "./syntaxes/viset-injection.tmLanguage.json",
+        "injectTo": [
+          "source.lua"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.line.toml.viset": "toml",
+          "meta.embedded.block.toml.viset": "toml",
+          "meta.embedded.inline.javascript.viset": "javascript"
+        },
+        "tokenTypes": {
+          "meta.embedded.line.toml.viset": "other",
+          "meta.embedded.block.toml.viset": "other",
+          "meta.embedded.inline.javascript.viset": "other"
+        }
+      },
+      {
+        "scopeName": "viset.injection.lua.block-marker",
+        "path": "./syntaxes/viset-block-marker-injection.tmLanguage.json",
+        "injectTo": [
+          "source.lua"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.toml.viset": "toml"
+        },
+        "tokenTypes": {
+          "meta.embedded.block.toml.viset": "other"
+        }
+      },
+      {
+        "scopeName": "source.toml.viset",
+        "path": "./syntaxes/toml-viset.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node test/tokenization.mjs",
+    "package": "node -e \"require('node:fs').mkdirSync('dist', { recursive: true })\" && vsce package --out dist/getviset.viset-0.1.0.vsix",
+    "check": "npm test && npm run package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "3.9.2",
+    "vscode-oniguruma": "2.0.1",
+    "vscode-textmate": "9.3.2"
+  }
+}

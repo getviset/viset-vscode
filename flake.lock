@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1767313136,
+        "narHash": "sha256-16KkgfdYqjaeRGBaYsNrhPRRENs0qzkQVUooNHtoy2w=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ac62194c3917d5f474c1a844b6fd6da2db95077d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "vscode-src": "vscode-src"
+      }
+    },
+    "vscode-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1784732104,
+        "narHash": "sha256-n/qGrkEIkCiBFqS39LmK0mq0kqv4Sf7qOa+NjTflB+0=",
+        "owner": "microsoft",
+        "repo": "vscode",
+        "rev": "1b6a188127eeaf9194f945eb6eb89a657e93c54c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "microsoft",
+        "ref": "1.130.0",
+        "repo": "vscode",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
